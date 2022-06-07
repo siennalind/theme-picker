@@ -1,0 +1,23 @@
+body.light-theme {
+    background-color: white;
+}
+
+h1.light-theme {
+    color: hsl(0, 0%, 0%);
+    text-shadow: 3px 3px 3px hsl(0, 0%, 70%);
+}
+
+button.light-theme {
+    background-image: 
+    linear-gradient(to bottom right, hsl(0, 0%, 70%), hsl(0, 0%, 90%))
+}
+
+@media only screen and (min-width: 450px) {
+    body.light-theme {
+        background-color: hsl(0, 0%, 80%);
+    }
+
+    main.light-theme {
+        background-color: hsl(0, 0%, 100%);
+    }
+}

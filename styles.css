@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Dosis', sans-serif;
+    font-size: clamp(3rem, 0.6rem + 7vw, 7rem);
+    margin: 1rem;
+    text-shadow: 2px 2px 2px #aaa;
+    letter-spacing: 0.1rem;
+}
+
+main {
+    font-size: 1.5rem;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+section {
+    margin: 1rem 0;
+}
+
+button {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5rem;
+    padding: 0.75rem;
+    margin: 1rem;
+    letter-spacing: 0.2rem;
+    border: none;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+button:active {
+    opacity: 0.5;
+}
+
+
+
+/* COLOR THEMES */
+body.dark-theme {
+    background-color: black;
+    color: whitesmoke;
+}
+
+@media only screen and (min-width: 500px) {
+    h1 {
+        margin: 0;
+    }
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        background-color:hsl(100, 0%, 80%);
+        height: 100%;
+    }
+
+    main {
+        background-color: white;
+        width: 75%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1.5rem;
+        border-radius: 15px 50px;
+    }}

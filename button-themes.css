@@ -1,0 +1,19 @@
+button.blue {
+    background-image: 
+    linear-gradient(to bottom right, hsl(200, 80%, 40%), hsl(200, 80%, 80%));
+}
+
+button.green {
+    background-image: 
+    linear-gradient(to bottom right, hsl(90, 70%, 40%), hsl(90, 70%, 80%));
+}
+
+button.coral {
+    background-image: 
+    linear-gradient(to bottom right, hsl(350, 80%, 60%), hsl(350, 80%, 90%));
+}
+
+button.purple {
+    background-image: 
+    linear-gradient(to bottom right, hsl(285, 80%, 40%), hsl(285, 30%, 80%));
+}
