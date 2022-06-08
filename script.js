@@ -1,19 +1,19 @@
 // LIGHT & DARK THEME
 const lightButton = document.getElementById('light');
 const darkButton = document.getElementById('dark');
-const h1 = document.getElementsByTagName('h1');
-const main = document.getElementsByTagName('main');
-const body = document.getElementsByTagName('body');
 const themeElements = document.querySelectorAll('.light-theme');
+const themes = ['light-theme', 'dark-theme'];
 
+// Clear any theme currently applied
 const clearTheme = () => {
-    themeElements.forEach(themeElements => {
-    if (themeElements.hasAttribute('class')) {
-    themeElements.removeAttribute('class');
-    }
-    })
-}
+    themes.forEach(theme => {
+        themeElements.forEach(themeElements => {
+        if (themeElements.classList.contains(theme)) {
+        themeElements.classList.remove(theme);
+        }})
+    })}
 
+// Applies new theme
 const handleTheme = (theme) => {
     clearTheme();
 
@@ -23,45 +23,34 @@ const handleTheme = (theme) => {
     } else {
     themeElements.classList.add(theme);
     }
-    })
-}
+    })}
 
 lightButton.addEventListener('click', function() {handleTheme('light-theme')});
 darkButton.addEventListener('click', function() {handleTheme('dark-theme')});
 
-// const clearTheme = () => {
-//     if (document.body.hasAttribute('class')) {
-//     document.body.removeAttribute('class');
-//     }
-// }
 
-// const handleLightTheme = () => {
-//     clearTheme();
+// ACCENT COLOURS
+const blueButton = document.getElementById('blue');
+const greenButton = document.getElementById('green');
+const coralButton = document.getElementById('coral');
+const purpleButton = document.getElementById('purple');
+const clearButton = document.getElementById('clear');
+const buttons = document.querySelectorAll('button');
 
-//     if (document.body.classList.contains('light-theme')) {
-//     return
-//     } else {
-//     document.body.classList.add('light-theme');
-//     }}
+// Array of available accent colours
+const accentColours = ['blue', 'green', 'coral', 'purple'];
 
-// const handleDarkTheme = () => {
-//     clearTheme();
-
-//     if (document.body.classList.contains('dark-theme')) {
-//     return;
-//     } else {
-//     document.body.classList.add('dark-theme');
-//     }}
-
-
-// CLEAR BUTTON COLOURS
+// Clears any accent colour currently applied
 const clearAccent = () => {
-    buttons.forEach(buttons => {
-        if (buttons.hasAttribute('class')) {
-        buttons.removeAttribute('class');
+    accentColours.forEach(accentColour => {
+        buttons.forEach(buttons => {
+        if (buttons.classList.contains(accentColour)) {
+        buttons.classList.remove(accentColour);
         }})
+    })
 }
 
+// Applies accent colour
 const handleAccent = (colour) => {
     clearAccent();
 
@@ -73,15 +62,9 @@ const handleAccent = (colour) => {
         }
     })}
 
-// COLOR THEMES
-const blueButton = document.getElementById('blue');
-const greenButton = document.getElementById('green');
-const coralButton = document.getElementById('coral');
-const purpleButton = document.getElementById('purple');
-const buttons = document.querySelectorAll('button');
-
 
 blueButton.addEventListener('click', function() {handleAccent('blue')});
 greenButton.addEventListener('click', function() {handleAccent('green')});
 coralButton.addEventListener('click', function() {handleAccent('coral')});
 purpleButton.addEventListener('click', function() {handleAccent('purple')});
+clearButton.addEventListener('click', clearAccent);
