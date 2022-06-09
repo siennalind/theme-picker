@@ -8,6 +8,7 @@ h1.light-theme {
 }
 
 button.light-theme {
+    color: hsl(0, 0%, 0%);
     background-image: 
     linear-gradient(to bottom right, hsl(0, 0%, 70%), hsl(0, 0%, 90%));
     border: 3px solid hsl(0, 0%, 0%);
